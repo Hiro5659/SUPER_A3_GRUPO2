@@ -17,6 +17,7 @@ public class Teste {
         System.out.print("Cada um vai printar uma coisa diferente!");
         System.out.println("AUAUAUAUAUAUAUAUAUUAUAAUUA OWO");
         System.out.println("alalaoaoalao");
+        System.out.println("eu sei oq vc fez no verao passado");
     }
     
 }
