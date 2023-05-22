@@ -16,6 +16,7 @@ public class Teste {
     public static void main(String[] args) {
         System.out.print("Cada um vai printar uma coisa diferente!");
         System.out.println("AUAUAUAUAUAUAUAUAUUAUAAUUA OWO");
+        System.out.println("alalaoaoalao");
     }
     
 }
