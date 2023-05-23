@@ -2,7 +2,7 @@ package conversor_de_moedas;
 
 public class Metodos {
 
-    //Criando um array de objetos da Moeda e um contador para controlar a quantidade de objetos inseridos
+    // Criando um array de objetos da Moeda e um contador para controlar a quantidade de objetos inseridos
     private Moeda[] moedas;
     private int contador;
 
@@ -11,14 +11,14 @@ public class Metodos {
         contador = 0;
     }
 
-    //Método para inserir objetos
+    // Método para inserir objetos
     public void inserirObjeto(Moeda objeto) {
         objeto.setId(contador);
         moedas[contador] = objeto;
         contador++;
     }
 
-    //Método para remover por ID
+    // Método para remover por ID
     public void removerPorId(int id) {
         int indice = buscarIndicePorId(id);
         if (indice != -1) {
@@ -30,7 +30,7 @@ public class Metodos {
         }
     }
 
-    //Método para atualizar atributo por ID
+    // Método para atualizar atributo por ID
     public void atualizarAtributoPorId(int id, String novoValor) {
         int indice = buscarIndicePorId(id);
         if (indice != -1) {
@@ -38,7 +38,7 @@ public class Metodos {
         }
     }
     
-    //Método para buscar por ID
+    // Método para buscar por ID
     public Moeda buscarPorId(int id) {
         int indice = buscarIndicePorId(id);
         if (indice != -1) {
@@ -47,7 +47,7 @@ public class Metodos {
         return null;
     }
     
-    //Buscar Indice Por ID
+    // Buscar Indice Por ID
     private int buscarIndicePorId(int id) {
         for (int i = 0; i < contador; i++) {
             if (moedas[i].getId() == id) {
