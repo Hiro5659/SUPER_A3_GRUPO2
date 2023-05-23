@@ -3,7 +3,7 @@
 -Métodos getters e setters.
 -2 construtores, um padrão e outro deve ter todos os parâmetros, exceto id.
 
-classe 2:
+Classe 2:
 -Um array de objetos(defina como array da classe).
 -Um método para inserir objetos, um por vez.
 -Um método para remover por id, um objeto do array.
