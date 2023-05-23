@@ -3,10 +3,10 @@ package conversor_de_moedas;
 public class Moeda {
 
     // 6 atributos, um sendo obrigatoriamente int
-    private int id; // ID da moeda
+    private int idMoeda; // ID da moeda
     private String codigoMoeda; // Uma String que representa o código da moeda, como "USD" para US Dollar ou "EUR" para Euro
     private String simboloMoeda; // Uma String representando o símbolo da moeda, como "$" para US Dollar ou "€" para Euro
-    private String nomeMoeda; // Uma String representando o nome completo da moeda, como "Dólar americano" ou "Euro"
+    private String nomeMoeda; // Uma String representando o nome completo da moeda, como "Dólar Americano" ou "Euro"
     private String paisMoeda; // Uma String representando a entidade ou país que distribui a moeda
     private int valorMoeda; // Um int representando o valor da moeda em relação ao Dólar americano
 
@@ -25,11 +25,11 @@ public class Moeda {
 
     // Getters e setters
     public int getId() {
-        return id;
+        return idMoeda;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.idMoeda = id;
     }
 
     public String getAtributo1() {

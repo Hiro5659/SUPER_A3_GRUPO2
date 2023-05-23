@@ -13,19 +13,21 @@ informações relacionadas ao objeto pesquisado. E outro, privativo, que retorne
 apenas o índice referente à posição no array, para ser usado na operação de 
 remoção.
 
+Classe principal:
+- Na classe principal, elabore uma estrutura que tenha disponível ao usuário do sistema, 
+todas as operações a serem realizadas no array.
+
 *o ID deve ser sequencial.*/
 package conversor_de_moedas;
 
 public class Conversor_de_Moedas {
 
     public static void main(String[] args) {
-        
-      
+
+new Menu().setVisible(true);
         
        
 
     }
-    
-    
-    
+
 }

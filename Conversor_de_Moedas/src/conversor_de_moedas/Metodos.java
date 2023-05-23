@@ -2,7 +2,7 @@ package conversor_de_moedas;
 
 public class Metodos {
 
-    // Criando um array de objetos da Moeda e um contador para controlar a quantidade de objetos inseridos
+    // Criando um array de moedas da classe Moeda e um contador para controlar a quantidade de moedas inseridas
     private Moeda[] moedas;
     private int contador;
 
@@ -37,7 +37,7 @@ public class Metodos {
             moedas[indice].setAtributo1(novoValor);
         }
     }
-    
+
     // Método para buscar por ID
     public Moeda buscarPorId(int id) {
         int indice = buscarIndicePorId(id);
@@ -46,7 +46,7 @@ public class Metodos {
         }
         return null;
     }
-    
+
     // Buscar Indice Por ID
     private int buscarIndicePorId(int id) {
         for (int i = 0; i < contador; i++) {
