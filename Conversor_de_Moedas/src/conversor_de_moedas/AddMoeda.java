@@ -85,6 +85,7 @@ public class AddMoeda extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton2.setText("Sobre");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
