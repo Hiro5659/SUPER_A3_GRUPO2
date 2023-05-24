@@ -56,7 +56,7 @@ public class Metodos {
     public void atualizarAtributoPorId(int id, String novoValor) {
         int indice = buscarIndicePorId(id);
         if (indice != -1) {
-            moedas[indice].setAtributo1(novoValor);
+            moedas[indice].setcodigoMoeda(novoValor);
         }
     }
 

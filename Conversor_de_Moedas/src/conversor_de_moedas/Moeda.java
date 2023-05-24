@@ -32,44 +32,44 @@ public class Moeda {
         this.idMoeda = id;
     }
 
-    public String getAtributo1() {
+    public String getcodigoMoeda() {
         return codigoMoeda;
     }
 
-    public void setAtributo1(String atributo1) {
-        this.codigoMoeda = atributo1;
+    public void setcodigoMoeda(String codigo) {
+        this.codigoMoeda = codigo;
     }
 
-    public String getAtributo2() {
+    public String getsimboloMoeda() {
         return simboloMoeda;
     }
 
-    public void setAtributo2(String atributo2) {
-        this.simboloMoeda = atributo2;
+    public void setsimboloMoeda(String simbolo) {
+        this.simboloMoeda = simbolo;
     }
 
-    public String getAtributo3() {
+    public String getnomeMoeda() {
         return nomeMoeda;
     }
 
-    public void setAtributo3(String atributo3) {
-        this.nomeMoeda = atributo3;
+    public void setnomeMoeda(String nome) {
+        this.nomeMoeda = nome;
     }
 
-    public String getAtributo4() {
+    public String getpaisMoeda() {
         return paisMoeda;
     }
 
-    public void setAtributo4(String atributo4) {
-        this.paisMoeda = atributo4;
+    public void setpaisMoeda(String pais) {
+        this.paisMoeda = pais;
     }
 
-    public int getAtributo5() {
+    public int getvalorMoeda() {
         return valorMoeda;
     }
 
-    public void setAtributo5(int atributo5) {
-        this.valorMoeda = atributo5;
+    public void setvalorMoeda(int valor) {
+        this.valorMoeda = valor;
     }
 
 }
