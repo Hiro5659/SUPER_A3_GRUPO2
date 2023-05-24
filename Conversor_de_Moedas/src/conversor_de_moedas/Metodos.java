@@ -1,10 +1,13 @@
 package conversor_de_moedas;
 
+import java.util.Scanner;
+
 public class Metodos {
 
     // Criando um array de moedas da classe Moeda e um contador para controlar a quantidade de moedas inseridas
     private Moeda[] moedas;
     private int contador;
+    Scanner scan = new Scanner(System.in);
 
     public Metodos(int tamanho) {
         moedas = new Moeda[tamanho];
@@ -15,7 +18,26 @@ public class Metodos {
     public void inserirObjeto(Moeda objeto) {
         objeto.setId(contador);
         moedas[contador] = objeto;
+
+        Moeda moeda[] = new Moeda[contador];
+        System.out.println("Qual e o nome da moeda?");
+        String nome = scan.next();
+
+        System.out.println("Qual e o codigo da moeda?");
+        String codigo = scan.next();
+
+        System.out.println("Qual e o pais de origem da moeda?");
+        String pais = scan.next();
+
+        System.out.println("Descreva o simbolo da moeda");
+        String simbolo = scan.next();
+
+        System.out.println("Qual e o valor da moeda em relacao ao dolar? Ex: Moeda = 3 x Dolar");
+        int valor = scan.nextInt();
+
+        moeda[contador - 1] = new Moeda(codigo, simbolo, nome, pais, valor);
         contador++;
+
     }
 
     // Método para remover por ID

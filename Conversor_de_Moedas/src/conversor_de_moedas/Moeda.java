@@ -15,12 +15,12 @@ public class Moeda {
     }
 
     // Construtor com todos os parâmetros, exceto id
-    public Moeda(String atributo1, String atributo2, String atributo3, String atributo4, int atributo5) {
-        this.codigoMoeda = atributo1;
-        this.simboloMoeda = atributo2;
-        this.nomeMoeda = atributo3;
-        this.paisMoeda = atributo4;
-        this.valorMoeda = atributo5;
+    public Moeda(String codigo, String simbolo, String nome, String pais, int valor) {
+        this.codigoMoeda = codigo;
+        this.simboloMoeda = simbolo;
+        this.nomeMoeda = nome;
+        this.paisMoeda = pais;
+        this.valorMoeda = valor;
     }
 
     // Getters e setters
