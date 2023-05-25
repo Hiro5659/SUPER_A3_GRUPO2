@@ -17,8 +17,9 @@ public class AddMoeda extends javax.swing.JFrame {
      */
     public AddMoeda() {
         initComponents();
+        
     }
-    
+    Metodos metodos = new Metodos(10);
   
 
     /**
@@ -46,7 +47,6 @@ public class AddMoeda extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Adicionar moeda");
-        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -195,7 +195,7 @@ public class AddMoeda extends javax.swing.JFrame {
             String nomeMoedanovo = nomeMoeda.getText();
             String paisMoedanovo = paisMoeda.getText();
             String valorMoedanovo = valorMoeda.getText();
-            Metodos metodos = new Metodos(0);
+            
             Moeda novaMoeda = new Moeda(codigoMoedanovo, simboloMoedanovo, nomeMoedanovo, paisMoedanovo, Integer.parseInt(valorMoedanovo));
             metodos.adicionarMoeda(novaMoeda);
             metodos.exibirMoedas();
@@ -251,7 +251,7 @@ public class AddMoeda extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField codigoMoeda;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

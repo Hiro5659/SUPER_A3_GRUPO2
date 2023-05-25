@@ -9,12 +9,14 @@ package conversor_de_moedas;
  * @author Rodz
  */
 public class Menu extends javax.swing.JFrame {
+    private Metodos metodos;
 
     /**
      * Creates new form Menu
      */
     public Menu() {
         initComponents();
+        
     }
 
     /**
