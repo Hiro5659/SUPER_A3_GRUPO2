@@ -6,6 +6,7 @@ public class Metodos {
     // Criando um array de moedas da classe Moeda e um contador para controlar a quantidade de moedas inseridas
     private Moeda[] moedas;
     private int contador;
+    private int teste;
     //Scanner scan = new Scanner(System.in);
 
 
