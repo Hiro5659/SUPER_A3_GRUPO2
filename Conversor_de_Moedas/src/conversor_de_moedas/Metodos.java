@@ -1,26 +1,48 @@
 package conversor_de_moedas;
 
-import java.util.Scanner;
-
+//import java.util.Scanner;
 public class Metodos {
 
     // Criando um array de moedas da classe Moeda e um contador para controlar a quantidade de moedas inseridas
     private Moeda[] moedas;
     private int contador;
-    Scanner scan = new Scanner(System.in);
+    //Scanner scan = new Scanner(System.in);
+
+
 
     public Metodos(int tamanho) {
         moedas = new Moeda[tamanho];
         contador = 0;
     }
 
-    // Método para inserir objetos
-    public void inserirObjeto(Moeda objeto) {
-        objeto.setId(contador);
-        moedas[contador] = objeto;
+        public int getContador() {
+        return contador;
+    }
+    // Método para inserir moedas
+    public void adicionarMoeda(Moeda novaMoeda) {
+        if (contador == moedas.length) {
+            aumentarTamanhoArray();
+        }
 
-        Moeda moeda[] = new Moeda[contador];
-        System.out.println("Qual e o nome da moeda?");
+        moedas[contador] = novaMoeda;
+        contador++;
+    }
+
+    public void aumentarTamanhoArray() {
+        int novoTamanho = moedas.length * 2; // Aumentar o tamanho do array para o dobro do tamanho atual
+        Moeda[] novoArray = new Moeda[novoTamanho];
+
+        System.arraycopy(moedas, 0, novoArray, 0, moedas.length);
+
+        moedas = novoArray;
+    }
+
+    public void exibirMoedas() {
+        System.out.println("Moedas existentes:");
+        for (int i = 0; i < contador; i++) {
+            System.out.println(moedas[i]);}
+
+            /*System.out.println("Qual e o nome da moeda?");
         String nome = scan.next();
 
         System.out.println("Qual e o codigo da moeda?");
@@ -36,11 +58,9 @@ public class Metodos {
         int valor = scan.nextInt();
 
         moeda[contador - 1] = new Moeda(codigo, simbolo, nome, pais, valor);
-        contador++;
-
-    }
-
-    // Método para remover por ID
+        contador++;*/
+        }
+        // Método para remover por ID
     public void removerPorId(int id) {
         int indice = buscarIndicePorId(id);
         if (indice != -1) {

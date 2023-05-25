@@ -24,6 +24,10 @@ public class Moeda {
     }
 
     // Getters e setters
+    
+    @Override
+    public String toString() {return "Moeda de valor " + valorMoeda;}
+    
     public int getId() {
         return idMoeda;
     }

@@ -18,6 +18,8 @@ public class AddMoeda extends javax.swing.JFrame {
     public AddMoeda() {
         initComponents();
     }
+    
+  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -188,7 +190,17 @@ public class AddMoeda extends javax.swing.JFrame {
                 || valorMoeda.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos.");
         } else {
-            JOptionPane.showMessageDialog(null, "Moeda salva com sucesso!");
+            String codigoMoedanovo = codigoMoeda.getText();
+            String simboloMoedanovo = simboloMoeda.getText();
+            String nomeMoedanovo = nomeMoeda.getText();
+            String paisMoedanovo = paisMoeda.getText();
+            String valorMoedanovo = valorMoeda.getText();
+            Metodos metodos = new Metodos(0);
+            Moeda novaMoeda = new Moeda(codigoMoedanovo, simboloMoedanovo, nomeMoedanovo, paisMoedanovo, Integer.parseInt(valorMoedanovo));
+            metodos.adicionarMoeda(novaMoeda);
+            metodos.exibirMoedas();
+            
+            JOptionPane.showMessageDialog(null, "Moeda salva com sucesso! Total de moedas: "+ metodos.getContador());
 
             /*String codigo = codigoMoeda.getText().trim();
             String simbolo = simboloMoeda.getText().trim();
