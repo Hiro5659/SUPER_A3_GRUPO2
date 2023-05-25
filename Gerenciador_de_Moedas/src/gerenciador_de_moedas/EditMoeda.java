@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package conversor_de_moedas;
+package gerenciador_de_moedas;
 
 import javax.swing.JOptionPane;
 
@@ -11,12 +11,14 @@ import javax.swing.JOptionPane;
  * @author Rodz
  */
 public class EditMoeda extends javax.swing.JFrame {
+    private Metodos metodos;
 
     /**
      * Creates new form EditMoeda
      */
-    public EditMoeda() {
+    public EditMoeda(Metodos metodos) {
         initComponents();
+        this.metodos = metodos;
     }
 
     /**
@@ -222,8 +224,8 @@ public class EditMoeda extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new EditMoeda().setVisible(true);
+             public void run() {
+                 
             }
         });
     }

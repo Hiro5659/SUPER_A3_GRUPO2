@@ -1,4 +1,4 @@
-package conversor_de_moedas;
+package gerenciador_de_moedas;
 
 public class Moeda {
 
