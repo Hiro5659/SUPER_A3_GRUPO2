@@ -24,9 +24,9 @@ public class Moeda {
     }
 
     // Getters e setters
-    
+    //Metodo toString() usado para retornar um valor String ao inves de um endereco de memoria no metodo exibirMoedasArray() da classe Metodos.
     @Override
-    public String toString() {return "Moeda de valor " + valorMoeda;}
+    public String toString() {return "Moeda de codigo " + codigoMoeda;}
     
     public int getId() {
         return idMoeda;

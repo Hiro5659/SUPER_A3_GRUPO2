@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
  * @author Rodz
  */
 public class EditMoeda extends javax.swing.JFrame {
+
     private Metodos metodos;
 
     /**
@@ -19,6 +20,7 @@ public class EditMoeda extends javax.swing.JFrame {
     public EditMoeda(Metodos metodos) {
         initComponents();
         this.metodos = metodos;
+
     }
 
     /**
@@ -178,6 +180,8 @@ public class EditMoeda extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
+
+
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -224,8 +228,8 @@ public class EditMoeda extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-             public void run() {
-                 
+            public void run() {
+
             }
         });
     }

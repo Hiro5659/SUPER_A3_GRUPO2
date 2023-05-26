@@ -11,6 +11,7 @@ import javax.swing.*;
  * @author Rodz
  */
 public class AddMoeda extends javax.swing.JFrame {
+
     private Metodos metodos;
 
     /**
@@ -19,10 +20,8 @@ public class AddMoeda extends javax.swing.JFrame {
     public AddMoeda(Metodos metodos) {
         initComponents();
         this.metodos = metodos;
-        
+
     }
-    
-  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -184,7 +183,7 @@ public class AddMoeda extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+// Checar se os campos estão em branco, caso sim mostrar mensagem de erro, caso não continuar com o código
         if (codigoMoeda.getText().isEmpty()
                 || simboloMoeda.getText().isEmpty()
                 || nomeMoeda.getText().isEmpty()
@@ -192,24 +191,20 @@ public class AddMoeda extends javax.swing.JFrame {
                 || valorMoeda.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos.");
         } else {
+            // Atributos recebem os valores inseridos na caixa de texto
             String codigoMoedanovo = codigoMoeda.getText();
             String simboloMoedanovo = simboloMoeda.getText();
             String nomeMoedanovo = nomeMoeda.getText();
             String paisMoedanovo = paisMoeda.getText();
             String valorMoedanovo = valorMoeda.getText();
-            
+            // Um novo objeto com os atributos inseridos é criado
             Moeda novaMoeda = new Moeda(codigoMoedanovo, simboloMoedanovo, nomeMoedanovo, paisMoedanovo, Integer.parseInt(valorMoedanovo));
+            // Método adicionarMoeda é invocado com a novaMoeda como parâmetro
             metodos.adicionarMoeda(novaMoeda);
-            metodos.exibirMoedas();
-            
-            JOptionPane.showMessageDialog(null, "Moeda salva com sucesso! Total de moedas: "+ metodos.getContador());
+            // Método exibirMoedas é invocado, mostrando ao usuário o número atualizado de objetos no Array
+            JOptionPane.showMessageDialog(null, "Moeda salva com sucesso! Total de moedas: " + metodos.getContador());
+            metodos.exibirMoedasArray();
 
-            /*String codigo = codigoMoeda.getText().trim();
-            String simbolo = simboloMoeda.getText().trim();
-            String nome = nomeMoeda.getText().trim();
-            String pais = paisMoeda.getText().trim();
-            String valor = valorMoeda.getText().trim();
-            Moeda moeda = new Moeda(codigo, simbolo, nome, pais, Integer.parseInt(valor));*/ //testing some stuff
         }
 
 // TODO add your handling code here:
@@ -246,7 +241,7 @@ public class AddMoeda extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
+
             }
         });
     }

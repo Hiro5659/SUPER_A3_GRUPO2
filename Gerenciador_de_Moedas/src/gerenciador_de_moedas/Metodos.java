@@ -1,102 +1,57 @@
 package gerenciador_de_moedas;
 
-//import java.util.Scanner;
 public class Metodos {
 
-    // Criando um array de moedas da classe Moeda e um contador para controlar a quantidade de moedas inseridas
+// Criando um array de moedas da classe Moeda e um contador para controlar a quantidade de moedas inseridas
     private Moeda[] moedas;
     private int contador;
-    //Scanner scan = new Scanner(System.in);
 
-
-
+    //Construtor da Classe Metodos
     public Metodos(int tamanho) {
         moedas = new Moeda[tamanho];
         contador = 0;
     }
+// Método get para o contador, que retorna o valor do contador
 
-        public int getContador() {
+    public int getContador() {
         return contador;
     }
-    // Método para inserir moedas
+
+    // Método para inserir moedas, se o contador for igual ao Array de moedas, invocar o método aumentarTamanhoArray
     public void adicionarMoeda(Moeda novaMoeda) {
         if (contador == moedas.length) {
             aumentarTamanhoArray();
         }
-
+        //  novaMoeda é inserida na posição do contador no Array moedas
         moedas[contador] = novaMoeda;
+        //  Aumentamos o contador
         contador++;
     }
 
+//  Método para aumentar tamanho do array
     public void aumentarTamanhoArray() {
-        int novoTamanho = moedas.length * 2; // Aumentar o tamanho do array para o dobro do tamanho atual
+        //  Um novo int é criado com o valor do comprimento do Array * 2
+        int novoTamanho = moedas.length * 2;
+        //  Um Array temporário é criado com o comprimento referente ao int criado na linha de cima
         Moeda[] novoArray = new Moeda[novoTamanho];
-
+        // Método arraycopy da classe System é utilizado, onde temos: vetor origem, pos. inicial no array origem, vetor destino, pos. inicial no array destino e n. de elementos
+        // que serão copiados
         System.arraycopy(moedas, 0, novoArray, 0, moedas.length);
-
+        // Igualamos o Array moedas com o novoArray
         moedas = novoArray;
     }
 
-    public void exibirMoedas() {
+    // Método para exibir moedas no console pra debug, atualmente utilizado no botao Salvar da classe AddMoeda, talvez mantenha ou nao. Atualmente utilizando o metodo toString() da classe Moeda para representar o objeto em String.
+    // Quando utilizamos o println em um objeto, automaticamente o metodo toString() e invocado para representar o objeto em String, por isso nao e preciso invoca-lo aqui.
+    public void exibirMoedasArray() {
         System.out.println("Moedas existentes:");
+        // Iteramos até chegarmos ao valor do contador
         for (int i = 0; i < contador; i++) {
-            System.out.println(moedas[i]);}
-
-            /*System.out.println("Qual e o nome da moeda?");
-        String nome = scan.next();
-
-        System.out.println("Qual e o codigo da moeda?");
-        String codigo = scan.next();
-
-        System.out.println("Qual e o pais de origem da moeda?");
-        String pais = scan.next();
-
-        System.out.println("Descreva o simbolo da moeda");
-        String simbolo = scan.next();
-
-        System.out.println("Qual e o valor da moeda em relacao ao dolar? Ex: Moeda = 3 x Dolar");
-        int valor = scan.nextInt();
-
-        moeda[contador - 1] = new Moeda(codigo, simbolo, nome, pais, valor);
-        contador++;*/
-        }
-        // Método para remover por ID
-    public void removerPorId(int id) {
-        int indice = buscarIndicePorId(id);
-        if (indice != -1) {
-            for (int i = indice; i < contador - 1; i++) {
-                moedas[i] = moedas[i + 1];
-            }
-            moedas[contador - 1] = null;
-            contador--;
-        }
-    }
-
-    // Método para atualizar atributo por ID
-    public void atualizarAtributoPorId(int id, String novoValor) {
-        int indice = buscarIndicePorId(id);
-        if (indice != -1) {
-            moedas[indice].setcodigoMoeda(novoValor);
-        }
-    }
-
-    // Método para buscar por ID
-    public Moeda buscarPorId(int id) {
-        int indice = buscarIndicePorId(id);
-        if (indice != -1) {
-            return moedas[indice];
-        }
-        return null;
-    }
-
-    // Buscar Indice Por ID
-    private int buscarIndicePorId(int id) {
-        for (int i = 0; i < contador; i++) {
-            if (moedas[i].getId() == id) {
-                return i;
+            //Se o valor nao for nulo(tava dando erro quando e nulo)
+            if (moedas[i] != null) {
+                // E printamos os valores percorridos no array moedas
+                System.out.println(moedas[i]);
             }
         }
-        return -1;
     }
-
 }

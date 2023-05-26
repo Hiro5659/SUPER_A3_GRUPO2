@@ -11,6 +11,7 @@ import javax.swing.JTable;
  * @author Rodz
  */
 public class ListaMoeda extends javax.swing.JFrame {
+
     private Metodos metodos;
 
     /**
@@ -19,6 +20,7 @@ public class ListaMoeda extends javax.swing.JFrame {
     public ListaMoeda(Metodos metodos) {
         initComponents();
         this.metodos = metodos;
+
     }
 
     /**
@@ -110,7 +112,7 @@ public class ListaMoeda extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
+
             }
         });
     }
@@ -121,10 +123,4 @@ public class ListaMoeda extends javax.swing.JFrame {
     private javax.swing.JTable listaMoedas;
     // End of variables declaration//GEN-END:variables
 
- 
-    }
-
-
-
-
-
+}
