@@ -18,17 +18,13 @@ Classe principal:
 todas as operações a serem realizadas no array.
 
 *o ID deve ser sequencial.*/
-package conversor_de_moedas;
+package gerenciador_de_moedas;
 
-public class Conversor_de_Moedas {
+public class Main {
 
     public static void main(String[] args) {
 
-new Menu().setVisible(true);
-
-    
-        
-       
+        new Menu().setVisible(true);
 
     }
 
