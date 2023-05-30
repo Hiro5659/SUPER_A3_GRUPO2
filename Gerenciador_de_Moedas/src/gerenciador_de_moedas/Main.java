@@ -18,7 +18,7 @@ Classe principal:
 todas as operações a serem realizadas no array.
 
 *o ID deve ser sequencial.*/
-package conversor_de_moedas;
+package gerenciador_de_moedas;
 
 public class Main {
 
