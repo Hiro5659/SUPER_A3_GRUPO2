@@ -24,6 +24,8 @@ public class Metodos {
         }
         //  novaMoeda é inserida na posição do contador no Array moedas
         moedas[contador] = novaMoeda;
+        novaMoeda.setId(contador);
+
         //  Aumentamos o contador
         contador++;
     }
