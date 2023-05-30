@@ -144,7 +144,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void btn_editMoedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editMoedaActionPerformed
         new EditMoeda(metodos).setVisible(true);
-        setVisible(false);
+        //setVisible(false);
 
     }//GEN-LAST:event_btn_editMoedaActionPerformed
 
