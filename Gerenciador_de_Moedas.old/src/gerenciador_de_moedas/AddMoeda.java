@@ -115,11 +115,11 @@ public class AddMoeda extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nome", "Pais", "Valor", "Codigo", "Simbolo", "ID"
+                "Nome", "Pais", "Valor", "Codigo", "Simbolo"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -273,7 +273,7 @@ public class AddMoeda extends javax.swing.JFrame {
             String valorMoedanovo = txtValorMoeda.getText();
 
             DefaultTableModel tbMoedas = (DefaultTableModel) tblListadeMoedas.getModel();
-            Object[] dados = {txtNomeMoeda.getText(), txtPaisMoeda.getText(), txtValorMoeda.getText(), txtCodigoMoeda.getText(), txtSimboloMoeda.getText(), metodos.getContador()};
+            Object[] dados = {txtNomeMoeda.getText(), txtPaisMoeda.getText(), txtValorMoeda.getText(), txtCodigoMoeda.getText(), txtSimboloMoeda.getText()};
             tbMoedas.addRow(dados);
 
             // Um novo objeto com os atributos inseridos é criado
@@ -285,7 +285,11 @@ public class AddMoeda extends javax.swing.JFrame {
             metodos.exibirMoedasArray();
 
         }
-
+        /*
+        DefaultTableModel dtmListaMoeda = (DefaultTableModel) listaMoedas.getModel();
+        Object[] dados = {nomeMoeda.getText(), paisMoeda.getText(), valorMoeda.getText(), codigoMoeda.getText(), simboloMoeda.getText()};
+        dtmListaMoeda.addRow(dados);
+         */
 // TODO add your handling code here:
     }//GEN-LAST:event_btnSalvarActionPerformed
 
@@ -301,54 +305,35 @@ public class AddMoeda extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLimparActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-        //TODO add your handling code here:
-
+        // TODO add your handling code here:
         if (tblListadeMoedas.getSelectedRow() != -1) {
             DefaultTableModel tbMoedas = (DefaultTableModel) tblListadeMoedas.getModel();
-            int selectedRow = tblListadeMoedas.getSelectedRow();
-            String id = tbMoedas.getValueAt(selectedRow, 5).toString();
-            metodos.removerMoeda(Integer.parseInt(id));
-            tbMoedas.removeRow(selectedRow);
-
-            // Update the IDs of the remaining coins
-            for (int i = 0; i < tbMoedas.getRowCount(); i++) {
-                tbMoedas.setValueAt(i, i, 5); // Update the ID column (assumes it's the 6th column)
-            }
-
+            tbMoedas.removeRow((tblListadeMoedas.getSelectedRow()));
         } else {
             JOptionPane.showMessageDialog(null, "Selecione um produto para Excluir");
         }
-
-
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarActionPerformed
         // TODO add your handling code here:
         if (tblListadeMoedas.getSelectedRow() != -1) {
-            int selectedRow = tblListadeMoedas.getSelectedRow();
-
-            tblListadeMoedas.setValueAt(txtNomeMoeda.getText(), selectedRow, 0);
-            tblListadeMoedas.setValueAt(txtPaisMoeda.getText(), selectedRow, 1);
-            tblListadeMoedas.setValueAt(txtValorMoeda.getText(), selectedRow, 2);
-            tblListadeMoedas.setValueAt(txtCodigoMoeda.getText(), selectedRow, 3);
-            tblListadeMoedas.setValueAt(txtSimboloMoeda.getText(), selectedRow, 4);
-            
-            
+            tblListadeMoedas.setValueAt(txtNomeMoeda.getText(), tblListadeMoedas.getSelectedRow(), 0);
+            tblListadeMoedas.setValueAt(txtPaisMoeda.getText(), tblListadeMoedas.getSelectedRow(), 1);
+            tblListadeMoedas.setValueAt(txtValorMoeda.getText(), tblListadeMoedas.getSelectedRow(), 2);
+            tblListadeMoedas.setValueAt(txtCodigoMoeda.getText(), tblListadeMoedas.getSelectedRow(), 3);
+            tblListadeMoedas.setValueAt(txtSimboloMoeda.getText(), tblListadeMoedas.getSelectedRow(), 4);
         }
     }//GEN-LAST:event_btnAtualizarActionPerformed
 
     private void tblListadeMoedasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblListadeMoedasMouseClicked
         // TODO add your handling code here:
-        int selectedRow = tblListadeMoedas.getSelectedRow();
-        if (selectedRow != -1) {
-            int rowCount = tblListadeMoedas.getRowCount();
-            if (rowCount > 1) {
-                txtNomeMoeda.setText(tblListadeMoedas.getValueAt(selectedRow, 0).toString());
-                txtPaisMoeda.setText(tblListadeMoedas.getValueAt(selectedRow, 1).toString());
-                txtValorMoeda.setText(tblListadeMoedas.getValueAt(selectedRow, 2).toString());
-                txtCodigoMoeda.setText(tblListadeMoedas.getValueAt(selectedRow, 3).toString());
-                txtSimboloMoeda.setText(tblListadeMoedas.getValueAt(selectedRow, 4).toString());
-            }
+        if (tblListadeMoedas.getSelectedRow() != -1) {
+            txtNomeMoeda.setText(tblListadeMoedas.getValueAt(tblListadeMoedas.getSelectedRow(), 0).toString());
+            txtPaisMoeda.setText(tblListadeMoedas.getValueAt(tblListadeMoedas.getSelectedRow(), 1).toString());
+            txtValorMoeda.setText(tblListadeMoedas.getValueAt(tblListadeMoedas.getSelectedRow(), 2).toString());
+            txtCodigoMoeda.setText(tblListadeMoedas.getValueAt(tblListadeMoedas.getSelectedRow(), 3).toString());
+            txtSimboloMoeda.setText(tblListadeMoedas.getValueAt(tblListadeMoedas.getSelectedRow(), 4).toString());
+
         }
     }//GEN-LAST:event_tblListadeMoedasMouseClicked
 
