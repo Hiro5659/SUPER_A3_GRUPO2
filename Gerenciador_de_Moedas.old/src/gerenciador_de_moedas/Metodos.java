@@ -55,20 +55,4 @@ public class Metodos {
             }
         }
     }
-
-    public void removerMoeda(int id) {
-        // Shift the elements after the removed element
-        for (int i = id; i < contador - 1; i++) {
-            moedas[i] = moedas[i + 1];
-            if (moedas[i] != null) {
-                moedas[i].setId(i);
-            }
-        }
-
-        // Set the last element to null
-        moedas[contador - 1] = null;
-
-        contador--;
-        System.out.println("Moeda com ID " + id + " removida com sucesso.");
-    }
 }
