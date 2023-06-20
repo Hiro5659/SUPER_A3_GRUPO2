@@ -1,5 +1,7 @@
 package gerenciador_de_moedas;
 
+import javax.swing.JOptionPane;
+
 public class Metodos {
 
 // Criando um array de moedas da classe Moeda e um contador para controlar a quantidade de moedas inseridas
@@ -71,4 +73,11 @@ public class Metodos {
         contador--;
         System.out.println("Moeda com ID " + id + " removida com sucesso.");
     }
+
+    public void buscarMoeda(String busca) {
+        
+        JOptionPane.showMessageDialog(null,"Nome: " + moedas[Integer.parseInt(busca)].getnomeMoeda() + " Pais: " + moedas[Integer.parseInt(busca)].getpaisMoeda()
+                + " Valor: " + moedas[Integer.parseInt(busca)].getvalorMoeda() + " Codigo: " + moedas[Integer.parseInt(busca)].getcodigoMoeda()
+                + " Simbolo: " + moedas[Integer.parseInt(busca)].getsimboloMoeda() + " Id: " + moedas[Integer.parseInt(busca)].getId());
+      }
 }
