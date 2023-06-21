@@ -279,6 +279,7 @@ public class AddMoeda extends javax.swing.JFrame {
 
     private void btnBuscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscaActionPerformed
         //Checamos se o campo de busca está vazio
+        try {
         if (txtBusca.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Por favor, escreva um ID.");
 
@@ -286,6 +287,9 @@ public class AddMoeda extends javax.swing.JFrame {
             //Caso não, Chamamos o método buscarMoeda com o ID inserido como parâmetro
             metodos.buscarMoeda(txtBusca.getText());
     }//GEN-LAST:event_btnBuscaActionPerformed
+    } catch (Exception e){
+        JOptionPane.showMessageDialog(null, "ID nao existente");
+    }
     }
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
