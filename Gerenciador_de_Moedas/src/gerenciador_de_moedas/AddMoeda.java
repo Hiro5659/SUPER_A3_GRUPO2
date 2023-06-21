@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Rodz
  */
 public class AddMoeda extends javax.swing.JFrame {
-
+    
     private Metodos metodos;
 
     /**
@@ -21,7 +21,7 @@ public class AddMoeda extends javax.swing.JFrame {
     public AddMoeda(Metodos metodos) {
         initComponents();
         this.metodos = metodos;
-
+        
     }
 
     /**
@@ -291,7 +291,7 @@ public class AddMoeda extends javax.swing.JFrame {
     private void btnBuscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscaActionPerformed
         metodos.buscarMoeda(txtBusca.getText());
     }//GEN-LAST:event_btnBuscaActionPerformed
-
+    
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
 // Checar se os campos estão em branco, caso sim mostrar mensagem de erro, caso não continuar com o código
@@ -308,7 +308,7 @@ public class AddMoeda extends javax.swing.JFrame {
             String nomeMoedanovo = txtNomeMoeda.getText();
             String paisMoedanovo = txtPaisMoeda.getText();
             String valorMoedanovo = txtValorMoeda.getText();
-
+            
             DefaultTableModel tbMoedas = (DefaultTableModel) tblListadeMoedas.getModel();
             Object[] dados = {txtNomeMoeda.getText(), txtPaisMoeda.getText(), txtValorMoeda.getText(), txtCodigoMoeda.getText(), txtSimboloMoeda.getText(), metodos.getContador()};
             tbMoedas.addRow(dados);
@@ -320,7 +320,7 @@ public class AddMoeda extends javax.swing.JFrame {
             // Método exibirMoedas é invocado, mostrando ao usuário o número atualizado de objetos no Array
             JOptionPane.showMessageDialog(null, "Moeda salva com sucesso! Total de moedas: " + metodos.getContador());
             metodos.exibirMoedasArray();
-
+            
         }
 
 // TODO add your handling code here:
@@ -351,11 +351,11 @@ public class AddMoeda extends javax.swing.JFrame {
             for (int i = 0; i < tbMoedas.getRowCount(); i++) {
                 tbMoedas.setValueAt(i, i, 5); // Update the ID column (assumes it's the 6th column)
             }
-
+            
         } else {
             JOptionPane.showMessageDialog(null, "Selecione um produto para Excluir");
         }
-
+        
 
     }//GEN-LAST:event_btnExcluirActionPerformed
 
@@ -363,13 +363,14 @@ public class AddMoeda extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (tblListadeMoedas.getSelectedRow() != -1) {
             int selectedRow = tblListadeMoedas.getSelectedRow();
-
+            
             tblListadeMoedas.setValueAt(txtNomeMoeda.getText(), selectedRow, 0);
             tblListadeMoedas.setValueAt(txtPaisMoeda.getText(), selectedRow, 1);
             tblListadeMoedas.setValueAt(txtValorMoeda.getText(), selectedRow, 2);
             tblListadeMoedas.setValueAt(txtCodigoMoeda.getText(), selectedRow, 3);
             tblListadeMoedas.setValueAt(txtSimboloMoeda.getText(), selectedRow, 4);
             
+            metodos.atualizarMoeda(selectedRow, txtNomeMoeda.getText(), txtPaisMoeda.getText(), txtValorMoeda.getText(), txtCodigoMoeda.getText(), txtSimboloMoeda.getText());
             
         }
     }//GEN-LAST:event_btnAtualizarActionPerformed
@@ -428,7 +429,7 @@ public class AddMoeda extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-
+                
             }
         });
     }

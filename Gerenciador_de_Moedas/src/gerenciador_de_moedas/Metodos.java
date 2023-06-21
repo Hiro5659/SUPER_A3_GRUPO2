@@ -74,10 +74,23 @@ public class Metodos {
         System.out.println("Moeda com ID " + id + " removida com sucesso.");
     }
 
-    public void buscarMoeda(String busca) {
-        
-        JOptionPane.showMessageDialog(null,"Nome: " + moedas[Integer.parseInt(busca)].getnomeMoeda() + " Pais: " + moedas[Integer.parseInt(busca)].getpaisMoeda()
-                + " Valor: " + moedas[Integer.parseInt(busca)].getvalorMoeda() + " Codigo: " + moedas[Integer.parseInt(busca)].getcodigoMoeda()
-                + " Simbolo: " + moedas[Integer.parseInt(busca)].getsimboloMoeda() + " Id: " + moedas[Integer.parseInt(busca)].getId());
-      }
+    public void buscarMoeda(String id) {
+
+        JOptionPane.showMessageDialog(null, "Nome: " + moedas[Integer.parseInt(id)].getnomeMoeda() + " Pais: " + moedas[Integer.parseInt(id)].getpaisMoeda()
+                + " Valor: " + moedas[Integer.parseInt(id)].getvalorMoeda() + " Codigo: " + moedas[Integer.parseInt(id)].getcodigoMoeda()
+                + " Simbolo: " + moedas[Integer.parseInt(id)].getsimboloMoeda() + " Id: " + moedas[Integer.parseInt(id)].getId());
+    }
+
+    public void atualizarMoeda(int id, String nome, String pais, String valor, String codigo, String simbolo) {
+
+        moedas[id].setnomeMoeda(nome);
+        moedas[id].setpaisMoeda(pais);
+        moedas[id].setvalorMoeda(Integer.parseInt(valor));
+        moedas[id].setcodigoMoeda(codigo);
+        moedas[id].setsimboloMoeda(simbolo);
+
+        System.out.println("Nome: " + moedas[id].getnomeMoeda() + " Pais: " + moedas[id].getpaisMoeda()
+                + " Valor: " + moedas[id].getvalorMoeda() + " Codigo: " + moedas[id].getcodigoMoeda()
+                + " Simbolo: " + moedas[id].getsimboloMoeda() + " Id: " + moedas[id].getId());
+    }
 }
