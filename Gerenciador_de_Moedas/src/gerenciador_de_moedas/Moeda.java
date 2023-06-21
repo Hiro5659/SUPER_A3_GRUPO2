@@ -2,13 +2,12 @@ package gerenciador_de_moedas;
 
 public class Moeda {
 
-    // 6 atributos, um sendo obrigatoriamente int
     private int idMoeda; // ID da moeda
     private String codigoMoeda; // Uma String que representa o código da moeda, como "USD" para US Dollar ou "EUR" para Euro
     private String simboloMoeda; // Uma String representando o símbolo da moeda, como "$" para US Dollar ou "€" para Euro
     private String nomeMoeda; // Uma String representando o nome completo da moeda, como "Dólar Americano" ou "Euro"
     private String paisMoeda; // Uma String representando a entidade ou país que distribui a moeda
-    private int valorMoeda; // Um int representando o valor da moeda em relação ao Dólar americano
+    private int valorMoeda; // Um int representando o valor da moeda em relação ao Dólar Americano
 
     // Construtor padrão
     public Moeda() {
@@ -23,13 +22,13 @@ public class Moeda {
         this.valorMoeda = valor;
     }
 
-    // Getters e setters
-    //Metodo toString() usado para retornar um valor String ao inves de um endereco de memoria no metodo exibirMoedasArray() da classe Metodos.
+    //Metodo toString() usado para retornar um valor String ao inves de um endereco de memoria no metodo exibirMoedasArray() da classe Metodos
     @Override
     public String toString() {
-        return "Moeda de ID " + idMoeda + " " + nomeMoeda;
+        return "Moeda de ID: " + idMoeda + " e Nome:  " + nomeMoeda;
     }
 
+    // Getters e setters
     public int getId() {
         return idMoeda;
     }
