@@ -44,7 +44,7 @@ public class AddMoeda extends javax.swing.JFrame {
         txtBusca = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Adicionar moeda");
+        setTitle("Gerenciar Moedas");
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N

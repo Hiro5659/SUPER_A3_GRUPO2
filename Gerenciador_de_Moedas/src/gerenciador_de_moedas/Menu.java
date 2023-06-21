@@ -29,7 +29,7 @@ public class Menu extends javax.swing.JFrame {
         jMenuBar2.add(jMenu4);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("\t\t\tGerenciador de Moedas de moedas");
+        setTitle("\t\t\tGerenciador de Moedas");
         setResizable(false);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
